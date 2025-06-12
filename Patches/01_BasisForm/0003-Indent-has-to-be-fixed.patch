@@ -1,0 +1,25 @@
+From 1907ab7945de18ca0f2c95a64ed059ed998a96f5 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 12:26:44 +0200
+Subject: [PATCH 03/27] Indet has to be fixed.
+
+---
+ src/App.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/App.js b/src/App.js
+index 312ab15..3a93df6 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -5,7 +5,7 @@ import Formelrad from "./formelrad/Formelrad";
+ function App() {
+   return (
+     <div className="App">
+-    <Formelrad/>
++      <Formelrad/>
+     </div>
+   );
+ }
+-- 
+2.30.0.windows.1
+

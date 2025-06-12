@@ -1,0 +1,31 @@
+From b79bd0a25fa81c423e66d0a4a7e75adf77c8a014 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 16:12:39 +0200
+Subject: [PATCH 25/27] Default color has to be black again.
+
+---
+ src/formelrad/Formelrad.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index 8dc6243..222972e 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -19,9 +19,14 @@ export default function Formelrad() {
+         message: "red"
+     })
+ 
++    function resetColors(){
++        setColors( colors=> ({...colors, u:"black", i:"black", r:"black", p:"black"}));
++    }
++
+     const handleSubmit = (event) => {
+         event.preventDefault();
+         console.log("handleSubmit")
++        resetColors();
+         if (values.u === "" && values.i === "") {
+             /*calculate u and i */
+             setValues(values => ({...values, u: Math.sqrt(values.p * values.r)}));
+-- 
+2.30.0.windows.1
+

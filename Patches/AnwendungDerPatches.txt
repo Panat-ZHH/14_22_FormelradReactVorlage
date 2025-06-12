@@ -1,0 +1,32 @@
+Vorbereitung fork machen
+Dann eigenes Repo clonen
+git clone https://github.com/<my forked repo>
+
+//Alle branches lokal holen
+git fetch --all
+git pull origin master
+git pull origin develop
+git pull origin featureInitialProject
+
+---
+Nun kann man die patches anwenden.
+Dazu die Patches ausserhalb des Projektordners bereithalten.
+git checkout -b featureBasisForm
+git apply ../Patches/01_BasisForm/0001<Tab>
+git add .
+git commit -m -a "Encapuslate-app-in-a-new-component"
+
+---
+weitere Commands
+Branch löschen
+git branch --D <branch>
+
+Branch zurücksetzen
+git reset --hard HEAD
+
+Branch 4 commits editieren
+git rebase -i HEAD~4
+
+Branch auf commit vor Mergecommit setzen
+SHA von commit eruieren
+git reset --hard <sha before the branches diverged>

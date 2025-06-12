@@ -1,0 +1,25 @@
+From 77b540df758a6989260e3c4a46e16457eff0bea3 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 16:37:12 +0200
+Subject: [PATCH 27/27] Values defines color of message text.
+
+---
+ src/formelrad/Formelrad.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index f3e99a6..0a15750 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -92,7 +92,7 @@ export default function Formelrad() {
+                     <InputField color={colors.p} value={values.p} label="Leistung" handleChange={e => {setValues(values => ({...values, p: e.target.value}))}} />
+                     <button type="submit">Calculate</button>
+                     <button style={{margin:10}} onClick={handleClear}>Clear</button>
+-                    <p>{values.message}</p>
++                    <p style={{ color: colors.message }}>{values.message}</p>
+                 </form>
+             </section>
+         </>
+-- 
+2.30.0.windows.1
+

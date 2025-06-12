@@ -1,0 +1,35 @@
+From 26ee0ff4e77c80b3857850a9b0e81a7c19483c43 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 13:24:40 +0200
+Subject: [PATCH 07/27] A Checkbox component is required.
+
+---
+ src/formular/Checkbox.js | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 src/formular/Checkbox.js
+
+diff --git a/src/formular/Checkbox.js b/src/formular/Checkbox.js
+new file mode 100644
+index 0000000..2299c97
+--- /dev/null
++++ b/src/formular/Checkbox.js
+@@ -0,0 +1,15 @@
++import {useState} from "react";
++
++export default function Checkbox({label, value, handleChange}) {
++    return (
++        <div>
++            <label>
++                <input
++                    type="checkbox"
++                    checked={value}
++                    onChange={handleChange}
++                />{label}
++            </label>
++        </div>
++    )
++}
+\ No newline at end of file
+-- 
+2.30.0.windows.1
+

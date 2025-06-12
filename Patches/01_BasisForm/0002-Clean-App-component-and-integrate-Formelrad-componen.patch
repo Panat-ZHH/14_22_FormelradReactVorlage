@@ -1,0 +1,42 @@
+From 669982473319e1957db3fc5aaf1ce1c43723f75b Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 12:24:57 +0200
+Subject: [PATCH 02/27] Clean App component and integrate Formelrad component.
+
+---
+ src/App.js | 16 ++--------------
+ 1 file changed, 2 insertions(+), 14 deletions(-)
+
+diff --git a/src/App.js b/src/App.js
+index 3784575..312ab15 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -1,23 +1,11 @@
+ import logo from './logo.svg';
+ import './App.css';
++import Formelrad from "./formelrad/Formelrad";
+ 
+ function App() {
+   return (
+     <div className="App">
+-      <header className="App-header">
+-        <img src={logo} className="App-logo" alt="logo" />
+-        <p>
+-          Edit <code>src/App.js</code> and save to reload.
+-        </p>
+-        <a
+-          className="App-link"
+-          href="https://reactjs.org"
+-          target="_blank"
+-          rel="noopener noreferrer"
+-        >
+-          Learn React
+-        </a>
+-      </header>
++    <Formelrad/>
+     </div>
+   );
+ }
+-- 
+2.30.0.windows.1
+

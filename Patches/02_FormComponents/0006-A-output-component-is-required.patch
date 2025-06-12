@@ -1,0 +1,32 @@
+From 37565fd7cb279fec89e73f4d418608283baf5843 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 13:24:09 +0200
+Subject: [PATCH 06/27] A output component is required.
+
+---
+ src/formular/OutputField.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 src/formular/OutputField.js
+
+diff --git a/src/formular/OutputField.js b/src/formular/OutputField.js
+new file mode 100644
+index 0000000..25290ff
+--- /dev/null
++++ b/src/formular/OutputField.js
+@@ -0,0 +1,12 @@
++export default function OutputField({label, value}) {
++    return (
++        <div>
++            <label>{label}</label>
++            <input
++                type="number"
++                value={value}
++                readOnly
++            />
++        </div>
++    )
++}
+\ No newline at end of file
+-- 
+2.30.0.windows.1
+

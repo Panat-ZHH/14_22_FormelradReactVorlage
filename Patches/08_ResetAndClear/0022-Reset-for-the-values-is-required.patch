@@ -1,0 +1,24 @@
+From 20bab5b9a62f44486a2a51bd6d26c7832ba738f5 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 16:05:40 +0200
+Subject: [PATCH 22/27] Reset for the values is required.
+
+---
+ src/formelrad/Formelrad.js | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index c51c55d..c346537 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -14,6 +14,7 @@ export default function Formelrad() {
+     const handleClear = (event) => {
+         event.preventDefault();
+         console.log("handleClear");
++        setValues(values => ({...values, u:"", i:"", r:"", p:"", message: ""}))
+     }
+ 
+     const handleSubmit = (event) => {
+-- 
+2.30.0.windows.1
+

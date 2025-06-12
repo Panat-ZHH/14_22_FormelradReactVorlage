@@ -1,0 +1,46 @@
+From 631e96af7cdedf26a981c35ca0f1ab1017b86a02 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 16:09:03 +0200
+Subject: [PATCH 23/27] Use color from data for the fields.
+
+---
+ src/formelrad/Formelrad.js | 16 ++++++++++++----
+ 1 file changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index 2bc1745..d01f8d9 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -11,6 +11,14 @@ export default function Formelrad() {
+         p: ""
+     })
+ 
++    const [colors, setColors] = useState({
++        u: "black",
++        i: "black",
++        r: "black",
++        p: "black",
++        message: "red"
++    })
++
+     const handleSubmit = (event) => {
+         event.preventDefault();
+         console.log("handleSubmit")
+@@ -49,10 +57,10 @@ export default function Formelrad() {
+                     <img src={formelrad} width="200" alt="Formelrad"/>
+                 </header>
+                 <form onSubmit={handleSubmit}>
+-                    <InputField color={"black"} value={values.u} label="Spannung" handleChange={e => {setValues(values => ({...values, u: e.target.value}))}} />
+-                    <InputField color={"black"} value={values.i} label="Stromstärke" handleChange={e => {setValues(values => ({...values, i: e.target.value}))}} />
+-                    <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
+-                    <InputField color={"black"} value={values.p} label="Leistung" handleChange={e => {setValues(values => ({...values, p: e.target.value}))}} />
++                    <InputField color={colors.u} value={values.u} label="Spannung" handleChange={e => {setValues(values => ({...values, u: e.target.value}))}} />
++                    <InputField color={colors.i} value={values.i} label="Stromstärke" handleChange={e => {setValues(values => ({...values, i: e.target.value}))}} />
++                    <InputField color={colors.r} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
++                    <InputField color={colors.p} value={values.p} label="Leistung" handleChange={e => {setValues(values => ({...values, p: e.target.value}))}} />
+                     <button type="submit">Calculate</button>
+                 </form>
+             </section>
+-- 
+2.30.0.windows.1
+

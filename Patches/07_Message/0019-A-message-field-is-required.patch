@@ -1,0 +1,34 @@
+From ceaa57da23b5b74229fe97f05df049b06666af63 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 15:57:11 +0200
+Subject: [PATCH 19/27] A message field is  required.
+
+---
+ src/formelrad/Formelrad.js | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index 2bc1745..cdd2db1 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -8,7 +8,8 @@ export default function Formelrad() {
+         u: 10,
+         i: 2,
+         r: "",
+-        p: ""
++        p: "",
++        message: ""
+     })
+ 
+     const handleSubmit = (event) => {
+@@ -54,6 +55,7 @@ export default function Formelrad() {
+                     <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
+                     <InputField color={"black"} value={values.p} label="Leistung" handleChange={e => {setValues(values => ({...values, p: e.target.value}))}} />
+                     <button type="submit">Calculate</button>
++                    <p>{values.message}</p>
+                 </form>
+             </section>
+         </>
+-- 
+2.30.0.windows.1
+

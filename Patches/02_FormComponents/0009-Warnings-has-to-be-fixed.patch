@@ -1,0 +1,21 @@
+From c3916c142800195ecdf6ec8f1df23f2c25b6eed5 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 13:31:36 +0200
+Subject: [PATCH 09/27] Warnings has to be fixed.
+
+---
+ src/App.js | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/App.js b/src/App.js
+index 3a93df6..2e89cc8 100644
+--- a/src/App.js
++++ b/src/App.js
+@@ -1,4 +1,3 @@
+-import logo from './logo.svg';
+ import './App.css';
+ import Formelrad from "./formelrad/Formelrad";
+ 
+-- 
+2.30.0.windows.1
+

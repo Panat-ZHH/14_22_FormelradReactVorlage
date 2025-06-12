@@ -1,0 +1,59 @@
+From 20896324052cc67e3fb2757d25bbfd79c5b801c4 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 13:35:39 +0200
+Subject: [PATCH 11/27] Formelrad component has to use mvp.styling.
+
+---
+ src/formelrad/Formelrad.js | 33 +++++++++++++++++++--------------
+ 1 file changed, 19 insertions(+), 14 deletions(-)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index 5f149a6..ee9e231 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -1,22 +1,27 @@
++import '../css/mvp.css';
+ import formelrad from "../image/formelradelektronik.gif";
+ 
+ export default function Formelrad() {
+     return (
+         <>
+-            <h2>Formelrad</h2>
+-            <img src={formelrad} width="200" alt="Formelrad"/>
+-            <form>
+-                <div>
+-                    <label>Spannung</label><input></input>
+-                </div>
+-                <div>
+-                    <label>Strom</label><input></input>
+-                </div>
+-                <div>
+-                    <label>Widerstand</label><input></input>
+-                </div>
+-                <button type="submit">Calculate</button>
+-            </form>
++            <section>
++                <header>
++                    <h2>Formelrad</h2>
++                    <img src={formelrad} width="200" alt="Formelrad"/>
++                </header>
++                <form>
++                    <div>
++                        <label>Spannung</label><input></input>
++                    </div>
++                    <div>
++                        <label>Strom</label><input></input>
++                    </div>
++                    <div>
++                        <label>Widerstand</label><input></input>
++                    </div>
++                    <button type="submit">Calculate</button>
++                </form>
++            </section>
+         </>
+     )
+ }
+\ No newline at end of file
+-- 
+2.30.0.windows.1
+

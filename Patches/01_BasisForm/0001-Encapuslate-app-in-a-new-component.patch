@@ -1,0 +1,26 @@
+From 39d3ac72424bb90f3f07517de8c8c1a4bb4dad97 Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 12:23:00 +0200
+Subject: [PATCH 01/27] Encapuslate app in a new component.
+
+---
+ src/formelrad/Formelrad.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 src/formelrad/Formelrad.js
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+new file mode 100644
+index 0000000..c1d0348
+--- /dev/null
++++ b/src/formelrad/Formelrad.js
+@@ -0,0 +1,6 @@
++export default function Formelrad() {
++    return (
++        <>
++        </>
++    )
++}
+\ No newline at end of file
+-- 
+2.30.0.windows.1
+

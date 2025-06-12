@@ -1,0 +1,27 @@
+From 213b8710997c370f64354271ecd06ef1b98a37ac Mon Sep 17 00:00:00 2001
+From: Peter Rutschmann <peter.rutschmann@bbw.ch>
+Date: Wed, 12 Apr 2023 15:15:11 +0200
+Subject: [PATCH 16/27] Calculation u and p is required.
+
+---
+ src/formelrad/Formelrad.js | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/formelrad/Formelrad.js b/src/formelrad/Formelrad.js
+index effd139..1cfcf42 100644
+--- a/src/formelrad/Formelrad.js
++++ b/src/formelrad/Formelrad.js
+@@ -22,6 +22,10 @@ export default function Formelrad() {
+             /*calculate u and r */
+             setValues(values => ({...values, u: values.p / values.i}));
+             setValues(values => ({...values, r: values.p / values.i / values.i}));
++        } else if (values.u === "" && values.p === "") {
++            /*calculate u and p */
++            setValues(values => ({...values, u: values.i * values.r}));
++            setValues(values => ({...values, p: values.i * values.i * values.r}));
+         }
+     }
+ 
+-- 
+2.30.0.windows.1
+
