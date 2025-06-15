@@ -1,5 +1,5 @@
-import '../css/mvp.css';
 import { useState } from 'react';
+import '../css/mvp.css';
 import formelrad from '../image/formelradelektronik.gif';
 import InputField from '../formular/InputField';
 
@@ -8,6 +8,7 @@ export default function Formelrad() {
 		u: 10,
 		i: 2,
 		r: '',
+		p: '',
 	});
 
 	return (
@@ -40,6 +41,14 @@ export default function Formelrad() {
 						label="Widerstand"
 						handleChange={(e) => {
 							setValues((values) => ({ ...values, r: e.target.value }));
+						}}
+					/>
+					<InputField
+						color={'black'}
+						value={values.p}
+						label="Leistung"
+						handleChange={(e) => {
+							setValues((values) => ({ ...values, p: e.target.value }));
 						}}
 					/>
 					<button type="submit">Calculate</button>
